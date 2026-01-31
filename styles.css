@@ -371,22 +371,24 @@ section {
 .about-image-wrapper {
     position: relative;
     width: 100%;
-    max-width: 50px;
+    max-width: 150px;
 }
 
 .about-image {
     position: relative;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
     z-index: 2;
     transition: var(--transition);
+    border: 3px solid var(--primary-color);
 }
 
 .about-image img {
-    width: 100%;
-    height: auto;
+    width: 150px;
+    height: 200px;
     display: block;
-    border-radius: 20px;
+    object-fit: cover;
+    border-radius: 7px;
     transition: var(--transition);
 }
 
@@ -769,8 +771,8 @@ section {
     }
 
     .about-image-wrapper {
-        margin: 0 auto;
-        max-width: 40px;
+        margin: 0;
+        max-width: 120px;
     }
 
     .skills-grid {
