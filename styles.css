@@ -770,6 +770,7 @@ section {
 
     .about-image-wrapper {
         margin: 0 auto;
+        max-width: 40px;
     }
 
     .skills-grid {
