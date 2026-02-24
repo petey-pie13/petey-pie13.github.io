@@ -3,21 +3,21 @@
    ============================================ */
 :root {
     /* Primary Colors */
-    --primary-color: #7c3aed;
-    --primary-light: #a78bfa;
-    --primary-dark: #5b21b6;
-    
+    --primary-color: #2563eb;
+    --primary-light: #60a5fa;
+    --primary-dark: #1e40af;
+
     /* Accent Colors */
-    --accent-color: #ec4899;
-    --accent-light: #f472b6;
-    
-    /* Neutral Colors */
-    --bg-primary: #0f0f1e;
-    --bg-secondary: #1a1a2e;
-    --bg-tertiary: #25253c;
-    --text-primary: #f1f5f9;
-    --text-secondary: #cbd5e1;
-    --text-muted: #94a3b8;
+    --accent-color: #818cf8;
+    --accent-light: #c7d2fe;
+
+    /* Neutral Colors (light theme) */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #ffffff;
+    --text-primary: #0f1724;
+    --text-secondary: #334155;
+    --text-muted: #6b7280;
     
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -32,10 +32,10 @@
     
     /* Effects */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
-    --glow: 0 0 20px rgba(124, 58, 237, 0.5);
+    --shadow-sm: 0 6px 12px rgba(16, 24, 40, 0.06);
+    --shadow-md: 0 10px 30px rgba(16, 24, 40, 0.08);
+    --shadow-lg: 0 20px 40px rgba(16, 24, 40, 0.10);
+    --glow: 0 0 18px rgba(37, 99, 235, 0.08);
 }
 
 /* ============================================
@@ -74,11 +74,11 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(15, 15, 30, 0.8);
-    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(6px);
     z-index: 1000;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(16,24,40,0.06);
 }
 
 .nav-container {
@@ -190,10 +190,10 @@ body {
 .hero-background {
     position: absolute;
     inset: 0;
-    background: 
-        radial-gradient(circle at 20% 50%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.15) 0%, transparent 50%);
-    animation: gradient-shift 15s ease infinite;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(129, 140, 248, 0.04) 0%, transparent 50%);
+    animation: gradient-shift 18s ease infinite;
 }
 
 @keyframes gradient-shift {
@@ -558,7 +558,7 @@ section {
 .project-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(15, 15, 30, 0.9);
+    background: rgba(255,255,255,0.9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -653,8 +653,8 @@ section {
 .form-group input,
 .form-group textarea {
     padding: 1rem;
-    background: var(--bg-secondary);
-    border: 2px solid rgba(124, 58, 237, 0.2);
+    background: #ffffff;
+    border: 1px solid rgba(16,24,40,0.06);
     border-radius: 10px;
     color: var(--text-primary);
     font-family: var(--font-primary);
@@ -709,15 +709,15 @@ section {
 }
 
 .social-icon {
-    width: 60px;
-    height: 60px;
-    background: var(--bg-secondary);
-    border: 2px solid rgba(124, 58, 237, 0.2);
-    border-radius: 15px;
+    width: 56px;
+    height: 56px;
+    background: #ffffff;
+    border: 1px solid rgba(16,24,40,0.06);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-light);
+    color: var(--primary-color);
     transition: var(--transition);
 }
 
@@ -744,20 +744,20 @@ section {
    Responsive Design
    ============================================ */
 @media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 80px);
-        background: rgba(15, 15, 30, 0.98);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        transition: left 0.3s ease;
-    }
+        .nav-menu {
+            position: fixed;
+            top: 80px;
+            left: -100%;
+            width: 100%;
+            height: calc(100vh - 80px);
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(6px);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            transition: left 0.3s ease;
+        }
 
     .nav-menu.active {
         left: 0;
